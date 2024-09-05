@@ -1,0 +1,372 @@
+/* {
+  outline: 1px solid red; 
+}*/
+
+.bg-primary{
+    background-color:$primary
+}
+
+.container{
+  max-width: 1296px;
+      margin: 0 auto;
+
+      @include pad{
+        max-width: 696px;
+       }
+
+      @include mobile{
+        max-width: 348px;
+       }
+}
+
+/*
+助教是這樣寫
+{max-width: 1320px;
+margin: 0 auto;
+padding-left: 12px;
+padding-right: 12px;
+}
+*/
+
+
+.banner-bg{
+  color: $secondary;
+  background-image: url("../images/home-header.png");
+  background-size: cover;
+  height: calc(100vh - 80px);
+  @include pad{
+    background-image: url("../images/home-header-sm.png");
+  }
+}
+  
+.banner{
+  &-wrap {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &-h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5;
+    @include mobile{
+      font-size: 24px;
+    }
+  }
+  &-h2{
+    font-size: 16px;
+    line-height: 1.5;
+    @include mobile{
+      font-size: 16px;
+    }
+  }
+  &-buttom {
+    background: $primary;
+    font-size: 20px;
+    padding: 6px 12px;
+    color: white;
+    margin-top:4px;
+    @include mobile{
+      margin-top:8px;
+    }
+  }
+}
+
+
+.feature {
+  width: calc(25% - 18px);
+  /*空隙24*3格/4項*/
+
+  @include pad{
+    width: calc(50% - 12px);
+  }
+  @include mobile{
+    width: 100%;
+  }
+
+  &-bg{
+    background: #FBF2F2;
+    color:$secondary
+  }
+
+  &-h2{
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+    @include mobile-larger{
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-container{
+    padding:80px 0;
+    @include mobile-larger{
+      padding:40px 0;;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  &-img {
+    width: 100px;
+    margin-bottom: 16px;
+  }
+
+  &-header {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $secondary;
+   }
+
+   & p{
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+
+  }
+}
+
+.classic{
+  margin: 80px 0;
+
+  &-card {
+    display: flex;
+    gap: 24px;
+    @include pad{
+      font-size: 24px;
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+
+  &-container{
+    max-width: 1296px;
+        margin: 0 auto;
+    @include pad{
+      max-width: 336px;
+    }
+  }
+
+  &-card-h4 {
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    color: $primary;
+    text-align: center;
+  }
+
+  &-index-h3 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    text-align: center;
+    color: #650300;
+  }
+}
+
+.cobrand {
+  background-image: url("../images/index-bg.png");
+  background-size: cover;
+  padding-bottom: 80px;
+  @include pad{
+  background-image: url("../images/index-bg-sm.png");
+   }
+   @include mobile{
+    background-image: url("../images/index-bg-md.png");
+   }
+   padding-bottom: 40px;
+
+   & h3{
+    font-size: 48px;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 80px;
+    @include mobile{
+      font-size:24px;
+      font-weight: 700;
+      padding-top: 40px;
+     }
+  }
+
+  &-list{
+    padding-top: 48px;
+    display: flex;
+    @include pad{
+      flex-wrap: wrap;
+    }
+    @include mobile{
+      padding-top: 24px;
+     }
+  }
+
+  &-container{
+    max-width: 1296px;
+    margin: 0 auto;
+    @include pad{
+      max-width: 696px;
+    }
+    @include mobile{
+      max-width: 348px;
+     }
+}
+
+&-card-h4{
+  font-size: 48px;
+  color: $primary;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  background: white;
+}
+
+&-card-mb24{
+  margin-bottom: 24px;
+}
+
+}
+
+.recommend{
+  padding: 80px 0;
+
+  &-h3{
+    font-size: 48px;
+    color: $secondary;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 48px;}
+  
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+     align-items: center;
+    }
+
+    &-card{
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px #00000029;
+      width: calc(25% - 18px);
+      @include pad{
+        width: calc(50% - 16px);
+      }
+  
+      @include mobile{
+        width: 100%;
+       }
+    }
+
+    &-card-body{
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &-card-time {
+      color: #707070;
+      font-size: 14px;
+      margin-top: auto;}
+    
+      & p{
+        font-size: 16px;
+      }
+  }
+
+.card-bottom{
+  margin-bottom: 72px;
+}
+
+.contact{
+padding: 80px 0;
+}
+
+.contact{
+  background: #FBF2F2;
+}
+
+.contact-h3{
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-align: center;
+  color: $secondary;
+  @include mobile{
+    font-size: 24px;
+   }
+}
+
+.contact-container{
+  max-width: 636px;
+  margin: 0 auto;
+}
+
+.contact-wrapper {
+  max-width: 636px;
+  padding: 12px;
+  margin: 0 auto;
+  @include mobile{
+    max-width: 348px;
+    padding: 12px;
+   }
+  }
+
+.contact-Feedback{
+  margin-bottom: 24px;
+    font-size: 20px;
+    @include mobile{
+      font-size: 16px;
+     }
+}
+
+.contact-form-li{
+  margin-bottom: 16px;
+}
+
+.contact-form-label{
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-input {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  background: #fbf2f2;
+  border: solid 1px black;
+  padding: 6px 12px;
+  box-sizing: border-box;
+}
+
+.contact-form-btn{
+  background: $primary;
+  color: white;
+  display: block;
+  width: 100%;
+  max-width: 416px;
+  border: none;
+  padding: 16px 0px;
+  margin: 0 auto;
+  margin-top: 64px;
+  font-size: 16px;
+}
+

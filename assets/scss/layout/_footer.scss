@@ -1,0 +1,128 @@
+/*footer*/
+.footer{
+    padding-top: 48px;
+    padding-bottom: 32px;
+    color: #FFFFFF;
+    font-family: "Noto Sans TC", sans-serif;
+
+    &-container{
+        max-width: 1296px;
+        margin: 0 auto;
+        padding: 0px 12px;
+    }
+
+    &-header{
+     justify-content: space-between;
+     border-bottom: solid 1px white;
+     padding-bottom: 32px;
+     margin-bottom: 32px;
+    }
+
+    &-contact-logo{   
+        font-family: 'Material Symbols Outlined';
+        line-height: 1;
+        font-size: 48px;
+        display: inline-block;
+        vertical-align: middle; 
+        margin-right: 16px;
+    } 
+       
+    &-call{
+        font-size: 36px;
+    }
+
+    &-social-logo{
+        height: 48px;
+        width: 48px;
+        padding: 0 16px;
+    }
+
+    &-footer{
+        justify-content: space-between;
+     }
+
+     &-company{
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+
+    &-terms{
+        font-size: 14px;
+        }
+    
+.footer-nav{
+    padding: 12px 24px;
+    font-size: 16px;
+
+    &-m{
+        margin-bottom: 26px;
+    }
+}
+    
+.pl-0{
+    padding-left: 0 !important;
+}
+}
+
+
+
+@include pad{
+    .footer-social-logo{
+        height: 40px;
+        width: 40px;
+        padding: 0 8x;
+    }
+}
+
+@include  mobile-larger{
+    .footer{
+        &-nav-m{
+        display: none;
+      }
+
+      &-social-logo{
+        height: 24px;
+        width: 24px;
+        padding: 0 8px; 
+      }
+
+      &-contact-logo{
+        font-size: 18px;
+        margin-right: 11px;
+      }
+
+      &-call{
+        font-size: 16px;
+      }
+
+      &-company{
+        margin-bottom: 8px;
+      }
+
+      &-footer {
+        flex-direction: column;
+              }
+
+      &-terms{
+        display: inline;
+       
+      }
+
+       &-header {
+        padding-bottom: 24px;
+        margin-bottom: 16px;
+      }
+
+        &-terms-container {
+        padding: 0;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+      
+      
+    }
+}
+
+.footer-mr48{
+  margin-right: 48px;
+}
